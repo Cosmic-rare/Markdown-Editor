@@ -59,12 +59,13 @@ export default {
 <style>
 @import "../css/preview.css";
 @import '../css/home_tabs.css';
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 textarea {
   margin: 0px;
   width: 100%;
   height: 500px;
-  font-family: "MigMix 1M";
+  font-family: 'Source Code Pro', monospace;
   font-size: 16px;
 }
 </style>
