@@ -1,27 +1,23 @@
 <template>
-  <div class='main'>
-    <div class="tabs">
-      <input id="edit" type="radio" name="tab_item" checked>
-      <label class="tab_item" for="edit">EDIT</label>
-      <input id="preview" type="radio" name="tab_item">
-      <label class="tab_item" for="preview">PREVIEW</label>
+  <div class="tabs">
 
-  <div class="tab_content" id="edit_content">
-    <div class="tab_content_description">
-          <div class='editor'>
-      <textarea @input='onChange' v-model='markdown'># Markdown</textarea>
+    <input id="edit" type="radio" name="tab_item" checked>
+    <label class="tab_item" for="edit">EDIT</label>
+    <input id="preview" type="radio" name="tab_item">
+    <label class="tab_item" for="preview">PREVIEW</label>
+      
+    <div class="tab_content" id="edit_content">
+      <div class="tab_content_description">
+          <textarea @input='onChange' v-model='markdown'># Markdown</textarea>
+      </div>
     </div>
-    </div>
-  </div>
-  <div class="tab_content" id="preview_content">
-    <div class="tab_content_description">
-         <div class='preview markdown-body' v-html='html'>
-    </div>
-    </div>
-  </div>
-</div>
 
- 
+    <div class="tab_content" id="preview_content">
+      <div class="tab_content_description">
+        <div class='preview markdown-body' v-html='html'></div>
+      </div>
+    </div>
+
   </div>
 </template>
 
