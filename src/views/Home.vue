@@ -64,6 +64,8 @@ textarea {
   margin: 0px;
   width: 100%;
   height: 500px;
+  font-family: "MigMix 1M";
+  font-size: 16px;
 }
 
 </style>
