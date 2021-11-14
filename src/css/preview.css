@@ -197,15 +197,16 @@ code.hljs {
   margin-bottom: 15px;
 }
 
-
-
-
-
-
 .markdown-body code {
   background-color: rgb(233, 226, 239);
   border-radius: 3px;
   font-size: 85%;
   margin: 0;
   padding: 0.2em 0.4em;
+}
+
+.markdown-body pre code {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
 }
