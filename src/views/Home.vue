@@ -14,7 +14,7 @@ export default {
   data() {
     return {
       text: '',
-      markdown: '<h1>Hello!</h1>\na\n<p>Oh! This is HTML Editor!</p>\n<style>\nh1{font-size:100px;color:#1f1;margin:0px;}\n</style>',
+      markdown: '# This is Markdown Editor',
       html: ''
     }
   },
