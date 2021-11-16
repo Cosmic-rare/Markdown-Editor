@@ -210,3 +210,7 @@ code.hljs {
   overflow-x: auto;
   padding: 1em;
 }
+
+.markdown-body img {
+  max-width: 400px;
+}

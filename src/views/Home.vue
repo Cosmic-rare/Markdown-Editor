@@ -1,21 +1,20 @@
 <template>
-  <div class="tabs">
+  <div class='content'>
+    <div class="tabs">
 
-    <input id="edit" type="radio" name="tab_item" checked>
-    <label class="tab_item" for="edit">EDIT</label>
-    <input id="preview" type="radio" name="tab_item">
-    <label class="tab_item" for="preview">PREVIEW</label>
-      
-    <div class="tab_content" id="edit_content">
-      <div class="tab_content_description">
-          <textarea @input='onChange' v-model='markdown'># Markdown</textarea>
+      <div v-bind:class="{hide: isHide}" class='tabItem'>
+        <textarea @input='onChange' v-model='markdown'># Markdown</textarea>
       </div>
-    </div>
 
-    <div class="tab_content" id="preview_content">
-      <div class="tab_content_description">
+      <div v-bind:class="{hide: !isHide}" class='tabItem'>
         <div class='preview markdown-body' v-html='html'></div>
       </div>
+
+    </div>
+
+    <div class='side'>
+      <input type='button' @click="changeEditor" class='button' /><br>
+      <button class='button' @click="addImage"></button>
     </div>
 
   </div>
@@ -42,12 +41,26 @@ export default {
     return {
       text: '',
       markdown: '# This is Markdown Editor',
-      html: ''
+      html: '',
+      isHide: false,
+      imageTemplate: '![](https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg)'
     }
   },
   methods: {
     onChange() {
       this.html = md.render(this.markdown)
+    },
+    changeEditor() {
+      if (this.isHide) {
+        this.isHide = false
+      } else {
+        this.isHide = true
+      }
+    },
+    addImage() {
+      this.markdown = this.markdown + `\n${this.imageTemplate}\n`
+      this.html = md.render(this.markdown)
+      
     }
   },
   mounted: function(){
