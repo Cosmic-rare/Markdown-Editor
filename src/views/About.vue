@@ -37,20 +37,5 @@ export default ({
 
 
 <style>
-.drop_area {
-  color: gray;
-  font-weight: bold;
-  font-size: 1.2em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 500px;
-  height: 300px;
-  border: 5px solid gray;
-  border-radius: 15px;
-}
-
-.enter {
-    border: 10px dotted powderblue;
-}
+@import '../css/About.css';
 </style>

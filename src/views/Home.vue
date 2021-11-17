@@ -57,7 +57,7 @@ export default {
 </script>
 
 <style>
-@import "../css/preview.css";
-@import '../css/home_tabs.css';
+@import "../css/markdown.css";
+@import '../css/Home.css';
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 </style>
