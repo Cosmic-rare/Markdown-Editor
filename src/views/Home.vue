@@ -13,8 +13,9 @@
     </div>
 
     <div class='side'>
-      <input type='button' @click="changeEditor" class='button' /><br>
-      <button class='button' @click="addImage"></button>
+      <button class='button' @click="toPreview" v-bind:class='{hide: isHide}'><img src='../../public/eye.svg' /></button>
+      <button class='button' @click="toEdit" v-bind:class='{hide: !isHide}'><img src='../../public/edit.svg' /></button><br>
+      <button class='button' @click="addImage"><img src='../../public/image.svg' /></button>
     </div>
 
   </div>
@@ -50,17 +51,15 @@ export default {
     onChange() {
       this.html = md.render(this.markdown)
     },
-    changeEditor() {
-      if (this.isHide) {
-        this.isHide = false
-      } else {
-        this.isHide = true
-      }
-    },
     addImage() {
       this.markdown = this.markdown + `\n${this.imageTemplate}\n`
-      this.html = md.render(this.markdown)
-      
+      this.html = md.render(this.markdown)      
+    },
+    toEdit() {
+      this.isHide = false
+    },
+    toPreview(){
+      this.isHide = true
     }
   },
   mounted: function(){
