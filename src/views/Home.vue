@@ -15,7 +15,12 @@
     <div class='side'>
       <button class='button' @click="toPreview" v-bind:class='{hide: isHide}'><img src='../../public/eye.svg' /></button>
       <button class='button' @click="toEdit" v-bind:class='{hide: !isHide}'><img src='../../public/edit.svg' /></button><br>
-      <button class='button' @click="addImage"><img src='../../public/image.svg' /></button>
+      <div class="cont">
+        <label class="vote">
+          <input type="file" name="image">
+          <img src="../../public/image.svg">
+        </label>  
+      </div>
     </div>
 
   </div>
@@ -60,4 +65,8 @@ export default {
 @import "../css/markdown.css";
 @import '../css/Home.css';
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+input[type="file"] {
+    display: none;
+}
 </style>

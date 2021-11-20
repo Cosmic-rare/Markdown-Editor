@@ -20,6 +20,24 @@
   padding: 0px;
 }
 
+.vote {
+  flex:0 1 auto;
+  width:200px;
+  margin:auto;
+}
+
+.cont {
+  margin-top: 15px;
+  background-color: #FFF;
+  width: 46px;
+  height: 46px;
+  border-radius: 23px;
+  border: 2px #000 solid;
+  display:flex;
+  text-align: center;
+}
+
+
 .content:after{
   content : '';
   display: block;
